@@ -1,0 +1,65 @@
+.view-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 ürün bir satır */
+  gap: 20px; /* Kartlar arası boşluk */
+  width: 100%;
+  max-width: 1200px;
+}
+
+.card {
+  width: 100%; /* Sabit genişlik */
+  height: 300px; /* Sabit yükseklik */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid #007bff; /* Çerçeve */
+  border-radius: 8px;
+  overflow: hidden; /* Taşmaları önler */
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+  width: 100%; /* Resmin container'ı kartın genişliğine uyar */
+  height: 150px; /* Sabit yükseklik verildi */
+  overflow: hidden; /* Taşmalar engellenir */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-image {
+  width: 100%; /* Resmin genişliği container'a uyacak şekilde ayarlandı */
+  height: 100%; /* Resmin yüksekliği container'a uyacak şekilde ayarlandı */
+  object-fit: cover; /* Resmi bozmadan sığdır */
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+}
+
+.card-buttons button {
+  flex: 1;
+  padding: 8px;
+  margin: 0 5px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-buttons button:hover {
+  background-color: #0056b3;
+}

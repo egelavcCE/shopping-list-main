@@ -1,0 +1,158 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 100px;
+  background-color: #242c24; /* Yeni arka plan rengi */
+}
+
+.logo-container {
+  flex: 1;
+}
+
+.logo {
+  width: 125px;
+  /* Amblem boyutunu 2x büyütüyoruz */
+}
+
+.search-container {
+  flex: 2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.search-input {
+  width: 60%;
+  padding: 10px 50px;
+  border-radius: 25px;
+  border: 2px solid #ccc;
+  font-size: 12px;
+  color: #9d9c9c;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #4a90e2; /* Arama kutusu odaklanıldığında mavi renk */
+}
+
+.search-icon {
+  position: absolute;
+  left: 20px;
+  font-size: 16px;
+  color: #9d9c9c;
+}
+
+.search-input:focus + .search-icon {
+  animation: rotate-border 1s infinite; /* Arama butonu etrafında sarı renk döndürme */
+}
+
+@keyframes rotate-border {
+  0% {
+    transform: rotate(0deg);
+    border-color: transparent;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-color: #4a90e2; /* Butona basılınca mavi renk */
+  }
+  100% {
+    transform: rotate(360deg);
+    border-color: transparent;
+  }
+}
+
+.actions-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.account-btn {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.account-btn:hover {
+  background-color: white;
+  color: black;
+  border-color: black;
+}
+
+.cart-btn {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.cart-btn:hover {
+  background-color: white;
+  color: black;
+  border-color: black;
+}
+
+.cart-icon {
+  color: white;
+}
+
+.cart-btn:hover .cart-icon {
+  color: black;
+}
+
+.account-dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  z-index: 1000;
+}
+
+.user-name {
+  padding: 10px;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+}
+
+.dropdown-item {
+  width: 100%;
+  text-align: left;
+  padding: 10px 15px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.dropdown-item:hover {
+  background-color: #4a90e2;
+  color: white;
+}
